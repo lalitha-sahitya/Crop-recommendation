@@ -5,9 +5,9 @@ import pickle
 with open('model (2).pkl', 'rb') as f:
     loaded_model = pickle.load(f)
 st.title('Crop recommendation 🌾')
-N = st.number_input('Nitrogen content (N)', min_value=0, max_value=250)
-P = st.number_input('Phosphorus content (P)', min_value=0, max_value=250)
-K = st.number_input('Potassium content (K)', min_value=0, max_value=250)
+N = st.number_input('Nitrogen content (N)', min_value=0, max_value=250, value=50)
+P = st.number_input('Phosphorus content (P)', min_value=0, max_value=250, value=50)
+K = st.number_input('Potassium content (K)', min_value=0, max_value=250, value=50)
 temperature = st.slider(
     'Select temperature (°C)',
     min_value=5,
